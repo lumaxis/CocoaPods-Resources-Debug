@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode7.3
+
+script:
+  - xcodebuild -workspace CocoaPods-Reources-Test.xcworkspace -scheme CocoaPods-Resources-Test
