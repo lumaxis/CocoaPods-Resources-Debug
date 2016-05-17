@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode7.3
 
+before_install:
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+
 script:
-  - xcodebuild -workspace CocoaPods-Reources-Test.xcworkspace -scheme CocoaPods-Resources-Test
+  - env NSUnbufferedIO=YES xcodebuild -workspace CocoaPods-Reources-Test.xcworkspace -scheme CocoaPods-Resources-Test
